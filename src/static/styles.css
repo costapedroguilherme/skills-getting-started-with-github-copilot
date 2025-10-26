@@ -85,7 +85,7 @@ section h3 {
 }
 
 .participants-list {
-  list-style: disc inside;
+  list-style: none; /* hide default bullets */
   margin: 0;
   padding: 8px 12px;
   background: linear-gradient(180deg, rgba(26,35,126,0.03), rgba(26,35,126,0.01));
@@ -98,8 +98,32 @@ section h3 {
 }
 
 .participant-item {
-  padding: 4px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 0;
   color: #263238;
+  border-bottom: 1px dashed rgba(0,0,0,0.04);
+}
+
+.participant-item:last-child { border-bottom: none; }
+
+.participant-email { margin-right: 12px; word-break: break-word; }
+
+.participant-delete {
+  background: transparent;
+  border: none;
+  color: #b00020;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.participant-delete:hover {
+  background-color: rgba(176,0,32,0.06);
+  color: #7a0016;
 }
 
 /* Small visual tweaks for empty state */
